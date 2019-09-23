@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <a class="navbar-brand" href="/">App Notas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+             {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link ml-5" href="/about">Hola  {{user.name}}</a>
+                </li>
+             {{else}}
+            {{/if}}
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            {{#if user}}
+                <li class="nav-item dropdown  mr-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Notes
+                    </a>
+                    <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdownMenuLink">
+                        <a class="nav-link " href="/note">Notes</a>
+                        <a class="nav-link " href="/note/add">Add New Nota</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="nav-link " href="/users/logout">Logout</a>
+                    </div>
+                </li>
+            {{else}}
+                <li class="nav-item active">
+                    <a class="nav-link" href="/users/signup">Signup</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/users/signin">Signin</a>
+                </li>
+            {{/if}}
+           
+
+        </ul>
+
+
+    </div>
+</nav>
