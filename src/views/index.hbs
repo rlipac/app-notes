@@ -1,4 +1,4 @@
-<script src="../models/User.js">
+
 
 
 </script>
@@ -7,58 +7,15 @@
     <h1 class="display-4">Te invito a votar el candidato de tu preferencia</h1>
     <hr class="y-4">
     <div class="container">
-        <style>
-    	.votacion{
-    		display: flex;
-    		justify-content: space-between;
-    	}
-		  .card {
-		    padding: 6px;
-		}
-		.card:hover {
-		    padding: 0px;
-		    -moz-transition: .3s linear;
-		    -webkit-transition: .3s ease-out;
-		    transition: .3s linear;
-		}
-        .width-card{
-            width: 10rem;
-        }
-    	
-    	
-    </style>
-     <script>
-    	function votoPresi1(){
-    		var votacion =  document.getElementById("voto1").value;
-   			  document.getElementById("mivoto").value = votacion; 			
-    	}
-    	function votoPresi2(){
-    		var votacion =  document.getElementById("voto2").value;
-   			  document.getElementById("mivoto").value = votacion; 
-   				
-    	}
-    	function votoPresi3(){
-    		var votacion =  document.getElementById("voto3").value;
-   			  document.getElementById("mivoto").value = votacion; 			
-    	}
-    	function votoPresi4(){
-    		var votacion =  document.getElementById("voto4").value;
-   			  document.getElementById("mivoto").value = votacion; 
-   				
-    	}
-    	function votoPresi5(){
-    		var votacion =  document.getElementById("voto5").value;
-   			  document.getElementById("mivoto").value = votacion; 			
-    	}
-    	
-    </script>
-<div class="row my-5">
+
+<div class="row">
     <div class="col-md-10 mx-auto">
          <h2 class="text-center ">Registrate  y Vota</h2>
         <div class="jumbotron">
           
-                
+                   <a href="/users/signup"  class="btn btn-primary btn-lg ">Votar</a>
                  	 <div class="form-group">
+                        
                 		<div class="votacion mx-auto">
 	                	 <div class="card my-1 mr-1 width-card"  id="mipresi1" >
 		                        <img alt="..." class="card-img-top" src="http://lucidez.pe/wp-content/uploads/2018/09/BeFunky-collage-135.jpg" id="images">
@@ -96,7 +53,7 @@
    
     </div>
     <p class="lead">Esta un una pequeña encuesta para ver tus preferencias electorales...</p>
-    <a href="/users/signup"  class="btn btn-primary btn-lg ">Votar</a>
+   
   
 </div>
 
