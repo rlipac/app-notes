@@ -1,7 +1,102 @@
+<script src="../models/User.js">
+
+
+</script>
+
 <div class="jumbotron mt-4">
-    <h1 class="display-4">Notes App node.js and MongoDB</h1>
+    <h1 class="display-4">Te invito a votar el candidato de tu preferencia</h1>
     <hr class="y-4">
-    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsa sapiente excepturi quia quis atque assumenda, vel iste aspernatur minus animi sed ratione harum quidem nostrum illo laudantium quisquam neque?</p>
-    <a href="#"  class="btn btn-primary btn-lg ">miWeb</a>
+    <div class="container">
+        <style>
+    	.votacion{
+    		display: flex;
+    		justify-content: space-between;
+    	}
+		  .card {
+		    padding: 6px;
+		}
+		.card:hover {
+		    padding: 0px;
+		    -moz-transition: .3s linear;
+		    -webkit-transition: .3s ease-out;
+		    transition: .3s linear;
+		}
+        .width-card{
+            width: 10rem;
+        }
+    	
+    	
+    </style>
+     <script>
+    	function votoPresi1(){
+    		var votacion =  document.getElementById("voto1").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	function votoPresi2(){
+    		var votacion =  document.getElementById("voto2").value;
+   			  document.getElementById("mivoto").value = votacion; 
+   				
+    	}
+    	function votoPresi3(){
+    		var votacion =  document.getElementById("voto3").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	function votoPresi4(){
+    		var votacion =  document.getElementById("voto4").value;
+   			  document.getElementById("mivoto").value = votacion; 
+   				
+    	}
+    	function votoPresi5(){
+    		var votacion =  document.getElementById("voto5").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	
+    </script>
+<div class="row my-5">
+    <div class="col-md-10 mx-auto">
+         <h2 class="text-center ">Registrate  y Vota</h2>
+        <div class="jumbotron">
+          
+                
+                 	 <div class="form-group">
+                		<div class="votacion mx-auto">
+	                	 <div class="card my-1 mr-1 width-card"  id="mipresi1" >
+		                        <img alt="..." class="card-img-top" src="http://lucidez.pe/wp-content/uploads/2018/09/BeFunky-collage-135.jpg" id="images">
+		                         
+	                        
+	                    </div>
+	                     <div class="card my-1 mr-1 width-card" id="mipresi2" >
+		                        <img alt="..." class="card-img-top" id="images" src="https://cde.canaln.pe/actualidad-veronika-mendoza-critica-encuentro-fujimori-dirigente-construccion-civil-n229994-764x480-271713.jpg">
+		                            
+	                        
+	                    </div>
+	                      <div class="card my-1 mr-1 width-card" id="mipresi3" >
+		                        <img alt="..." class="card-img-top" src="https://www.celag.org/wp-content/uploads/2018/11/julio-guzman.jpg">
+		                        
+	                        
+	                    </div>
+	                     <div class="card my-1 mr-1 width-card" id="mipresi4" >
+		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Keiko_Fujimori_em_outubro_de_2010.jpg	">
+		                          
+	                        
+	                    </div>
+	                      <div class="card my-1 mr-1 width-card"  id="mipresi5" >
+		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Barnechea.jpg">
+		                           
+	                    
+                   </div>
+                 </div>  
+                </div>
+              
+            
+        </div>
+    </div>
+</div>
+        
+   
+    </div>
+    <p class="lead">Esta un una pequeña encuesta para ver tus preferencias electorales...</p>
+    <a href="/users/signup"  class="btn btn-primary btn-lg ">Votar</a>
+  
 </div>
 

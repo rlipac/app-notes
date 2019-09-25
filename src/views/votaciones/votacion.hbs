@@ -1,0 +1,21 @@
+<div class="row">
+
+    {{#each notes}}
+    <div class="col-md-3 my-2">
+        <div class="card text-center">
+            
+            <p class="p-1">este presidente:  {{user.presidente}}</p>
+            
+
+        </div>
+    </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <h2>hello {{user.email}}</h2>
+            <p class="display-5">No tienes notas</p>
+            <a href="/note/add" class="btn btn-success  mx-auto my-2">Crea Una ahora</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

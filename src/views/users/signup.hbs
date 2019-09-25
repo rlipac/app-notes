@@ -1,34 +1,176 @@
+<style>
+    	.votacion{
+    		display: flex;
+    		justify-content: space-between;
+    	}
+		  .card {
+		    padding: 6px;
+		}
+		.card:hover {
+		    padding: 0px;
+		    -moz-transition: .3s linear;
+		    -webkit-transition: .3s ease-out;
+		    transition: .3s linear;
+		}
+        .width-card{
+            width: 10rem;
+        }
+    	
+    	
+    </style>
+     <script>
+    	function votoPresi1(){
+    		var votacion =  document.getElementById("voto1").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	function votoPresi2(){
+    		var votacion =  document.getElementById("voto2").value;
+   			  document.getElementById("mivoto").value = votacion; 
+   				
+    	}
+    	function votoPresi3(){
+    		var votacion =  document.getElementById("voto3").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	function votoPresi4(){
+    		var votacion =  document.getElementById("voto4").value;
+   			  document.getElementById("mivoto").value = votacion; 
+   				
+    	}
+    	function votoPresi5(){
+    		var votacion =  document.getElementById("voto5").value;
+   			  document.getElementById("mivoto").value = votacion; 			
+    	}
+    	
+    </script>
 <div class="row my-5">
-    <div class="col-md-4 mx-auto">
-        <div class="card">
-           <div class="card-header text-center">
-                <h3>Registrate  a Notes</h3>
+    <div class="col-md-10 mx-auto">
+         <h2 class="text-center ">Registrate  y Vota</h2>
+        <div class="jumbotron">
+          
                
-            </div>
-             <img src="/images/scare.png" class="rounded-circle  mx-auto" width="180" alt="mi-logo">
-            <div class="card-body">
-                <form action="/users/signup" method="POST">
+               
+       <form action="/users/signup" method="POST" class="mt-2">
+       
+            
+             
+          
+      
+            <!--    
             <div class="form-group">
                 <label for="">Nombre</label>
                 <input type="text" class="form-control" name="name" id="" placeholder="Nombre">
             </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="email" class="form-control" name="email" id="" placeholder="Email" >
-            </div>
-             <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" name="password" id="" placeholder="Password" >
-            </div>
-              <div class="form-group">
-                <label for="">Confimmar Password</label>
-                <input type="password" class="form-control" name="confirm_password" id="" placeholder="Confirmme password">
-            </div>
-             <div class="form-group">
-                 <button class="btn btn-primary btn-block">Signup</button>
-            </div>
-        </form>
-            </div>
+            -->
+              
+                
+                 	 <div class="form-group">
+                		<div class="votacion mx-auto">
+	                	 <div class="card my-1 mr-1 width-card"  id="mipresi1" >
+		                        <img alt="..." class="card-img-top" src="http://lucidez.pe/wp-content/uploads/2018/09/BeFunky-collage-135.jpg" id="images">
+		                            <div class="card-body">
+		                              
+			                              <input type="hidden" value="Daniel Urresty" id="voto1">
+										<div class="form-check" >
+										  <input class="form-check-input" type="radio" name="exampleRadios" id="" 
+										  value="option1" onclick="votoPresi1()">
+										  <label class="form-check-label" for="">
+										    Daniel Urresti
+										  </label>
+										</div>
+	                           	 </div>
+	                        
+	                    </div>
+	                     <div class="card my-1 mr-1 width-card" id="mipresi2" >
+		                        <img alt="..." class="card-img-top" id="images" src="https://cde.canaln.pe/actualidad-veronika-mendoza-critica-encuentro-fujimori-dirigente-construccion-civil-n229994-764x480-271713.jpg">
+		                            <div class="card-body">
+		                              
+		                               <input type="hidden" value="Veronika Mendoza" id="voto2">
+		                              <div class="form-check">
+									  <input class="form-check-input" type="radio" name="exampleRadios" id="" 
+									  value="option2"  onclick="votoPresi2()">
+									  <label class="form-check-label" for="">
+									    Veronika mendoza
+									  </label>
+									</div>
+		                               
+	                       </div>
+	                        
+	                    </div>
+	                      <div class="card my-1 mr-1 width-card" id="mipresi3" >
+		                        <img alt="..." class="card-img-top" src="https://www.celag.org/wp-content/uploads/2018/11/julio-guzman.jpg">
+		                            <div class="card-body">
+		                            
+		                               <input type="hidden" value="Julio Guzman" id="voto3">
+		                                <div class="form-check" >
+									  <input class="form-check-input" type="radio" name="exampleRadios" id="" 
+									  value="option3" onclick="votoPresi3()">
+									  <label class="form-check-label" for="">
+									    Julio Gusman
+									  </label>
+									 </div> 
+	                       </div>
+	                        
+	                    </div>
+	                     <div class="card my-1 mr-1 width-card" id="mipresi4" >
+		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Keiko_Fujimori_em_outubro_de_2010.jpg	">
+		                            <div class="card-body">
+		                             
+		                               <input type="hidden" value="Keiko Fujimomri" id="voto4">
+		                                <div class="form-check">
+									  <input class="form-check-input" type="radio" name="exampleRadios" id="" 
+									  value="option4"  onclick="votoPresi4()">
+									  <label class="form-check-label" for="">
+									    Keiko Fujimori
+									  </label>
+	                            </div>
+	                        </div>
+	                        
+	                    </div>
+	                      <div class="card my-1 mr-1 width-card"  id="mipresi5" >
+		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Barnechea.jpg">
+		                            <div class="card-body">
+		                             
+		                               <input type="hidden" value="Alfredo Barnechea" id="voto5">
+		                                <div class="form-check" >
+									  <input class="form-check-input" type="radio" name="exampleRadios" id="" 
+									  value="option5" onclick="votoPresi5()">
+									  <label class="form-check-label" for="">
+									    Alfredo Barnechea
+									  </label>
+	                      	 </div>
+	                        
+	                    </div>
+	                    
+                   </div>
+                 </div>  
+                </div>
+                     <div class="form-group">
+                    <label for="exampleInputPassword1">
+                       
+                    </label>
+                    <input class="form-control" id="mivoto" name="presidente" placeholder="mi Voto" type="hidden" value="{{presidente}}">
+                    </input>
+                </div>
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="email" id="" placeholder="Email" value="{{email}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" name="password" id="" placeholder="Password"  {{password}}>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label for="">Confimmar Password</label>
+                    <input type="password" class="form-control" name="confirm_password" id="" placeholder="Confirmme password">
+                </div>
+                -->
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Signup</button>
+                </div>
+          </form>
+            
         </div>
     </div>
 </div>

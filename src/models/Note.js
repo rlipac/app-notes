@@ -8,4 +8,6 @@ const NoteSchema =  new Schema({
     user: {type: String} // se crea este dato para enlasarlo con lasnotas del usuario
 })
 
+
+
 module.exports = mongoose.model('Note', NoteSchema);

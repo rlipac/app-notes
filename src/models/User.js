@@ -3,7 +3,8 @@ const {Schema} = mongoose;
 const bcrypt = require('bcryptjs');
 
 const UserSchema =  new Schema({ // crea el modelo  del la tabla User
-    name : { type: String, required: true },
+    //name : { type: String, required: true },
+    presidente: {type: String, required: true},
     email : { type: String, required: true },
     password : { type: String, required: true },
     date : { type: Date, default: Date.now },

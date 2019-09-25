@@ -12,9 +12,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
             </li>
+             
              {{#if user}}
                 <li class="nav-item">
-                    <a class="nav-link ml-5" href="/about">Hola  {{user.name}}</a>
+                    <a class="nav-link ml-5" href="/about">Hola  {{user.email}}</a>
+                     
                 </li>
              {{else}}
             {{/if}}
@@ -28,19 +30,20 @@
                         Notes
                     </a>
                     <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdownMenuLink">
-                        <a class="nav-link " href="/note">Notes</a>
+                       <!--<a class="nav-link " href="/note">Notes</a>
                         <a class="nav-link " href="/note/add">Add New Nota</a>
+                         <a class="nav-link" href="/votaciones">Votaciones</a>-->
                         <div class="dropdown-divider"></div>
                         <a class="nav-link " href="/users/logout">Logout</a>
                     </div>
                 </li>
             {{else}}
                 <li class="nav-item active">
-                    <a class="nav-link" href="/users/signup">Signup</a>
+                    <a class="nav-link" href="/users/signup" active>Votar</a>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/users/signin">Signin</a>
+                    <!--<a class="nav-link " href="/users/signin">Signin</a>-->
                 </li>
             {{/if}}
            
