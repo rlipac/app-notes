@@ -14,7 +14,7 @@ body {
 .card-container{
     margin: auto;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
   .card {
     padding: 6px;
