@@ -6,23 +6,32 @@ body {
     
     
 }
-
-.new-note{
-    background-color: #6DD5FA;  
+.container{
+    background-color: #eceff1
 }
-
 .card-container{
     margin: auto;
     display: flex;
     justify-content:space-evenly;
 }
-  .card {
-    padding: 6px;
+
+.mi-foto{
+    padding: 4px;
+   
+    background-color: #fafafa
 }
-.card:hover {
-    padding: 0px;
+.mi-foto:hover{
+    padding: 8px;
+  
     -moz-transition: .3s linear;
     -webkit-transition: .3s ease-out;
     transition: .3s linear;
 }
+
+
+.new-note{
+    background-color: #6DD5FA;  
+}
+
+
 
