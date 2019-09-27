@@ -1,23 +1,4 @@
-<style>
-    	.votacion{
-    		display: flex;
-    		justify-content: space-between;
-    	}
-		  .card {
-		    padding: 6px;
-		}
-		.card:hover {
-		    padding: 0px;
-		    -moz-transition: .3s linear;
-		    -webkit-transition: .3s ease-out;
-		    transition: .3s linear;
-		}
-        .width-card{
-            width: 10rem;
-        }
-    	
-    	
-    </style>
+
      <script>
     	function votoPresi1(){
     		var votacion =  document.getElementById("voto1").value;
@@ -43,30 +24,21 @@
     	}
     	
     </script>
-<div class="row my-5">
-    <div class="col-md-10 mx-auto">
-         <h2 class="text-center ">Registrate  y Vota</h2>
-        <div class="jumbotron">
-          
-               
-               
-       <form action="/users/signup" method="POST" class="mt-2">
+
+      <div class="jumbotron">
+
+	  
        
-            
-             
           
-      
-            <!--    
-            <div class="form-group">
-                <label for="">Nombre</label>
-                <input type="text" class="form-control" name="name" id="" placeholder="Nombre">
-            </div>
-            -->
-              
+             <h2 class="text-center ">Registrate  y Vota</h2>
+               
+     
+       
                 
-                 	 <div class="form-group">
-                		<div class="votacion mx-auto">
-	                	 <div class="card my-1 mr-1 width-card"  id="mipresi1" >
+                 	
+                		<div class="row card-container mx-auto">
+							 
+	                	 <div class="card my-1 mr-1  " style="width:16rem;"  id="mipresi1" >
 		                        <img alt="..." class="card-img-top" src="http://lucidez.pe/wp-content/uploads/2018/09/BeFunky-collage-135.jpg" id="images">
 		                            <div class="card-body">
 		                              
@@ -81,7 +53,7 @@
 	                           	 </div>
 	                        
 	                    </div>
-	                     <div class="card my-1 mr-1 width-card" id="mipresi2" >
+	                     <div class="card my-1 mr-1 " style="width:16rem;"  id="mipresi2" >
 		                        <img alt="..." class="card-img-top" id="images" src="https://cde.canaln.pe/actualidad-veronika-mendoza-critica-encuentro-fujimori-dirigente-construccion-civil-n229994-764x480-271713.jpg">
 		                            <div class="card-body">
 		                              
@@ -97,7 +69,7 @@
 	                       </div>
 	                        
 	                    </div>
-	                      <div class="card my-1 mr-1 width-card" id="mipresi3" >
+	                      <div class="card my-1 mr-1 " style="width:16rem;"  id="mipresi3" >
 		                        <img alt="..." class="card-img-top" src="https://www.celag.org/wp-content/uploads/2018/11/julio-guzman.jpg">
 		                            <div class="card-body">
 		                            
@@ -112,8 +84,8 @@
 	                       </div>
 	                        
 	                    </div>
-	                     <div class="card my-1 mr-1 width-card" id="mipresi4" >
-		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Keiko_Fujimori_em_outubro_de_2010.jpg	">
+	                     <div class="card my-1 mr-1 " style="width:16rem;"  id="mipresi4" >
+		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Keiko_Fujimori.jpg	">
 		                            <div class="card-body">
 		                             
 		                               <input type="hidden" value="Keiko Fujimomri" id="voto4">
@@ -127,8 +99,8 @@
 	                        </div>
 	                        
 	                    </div>
-	                      <div class="card my-1 mr-1 width-card"  id="mipresi5" >
-		                        <img alt="..." class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Barnechea.jpg">
+	                      <div class="card my-1 mr-1 "  style="width:16rem;"  id="mipresi5" >
+		                        <img alt="..." class="card-img-top" src="https://www.construccionyvivienda.com/media/k2/items/cache/5189f3286915715b50cff89ddded1008_XL.jpg">
 		                            <div class="card-body">
 		                             
 		                               <input type="hidden" value="Alfredo Barnechea" id="voto5">
@@ -144,7 +116,8 @@
 	                    
                    </div>
                  </div>  
-                </div>
+			  <form action="/users/signup" method="POST" class="mt-2" > 
+                
                      <div class="form-group">
                     <label for="exampleInputPassword1">
                        
@@ -170,9 +143,7 @@
                     <button class="btn btn-primary btn-block">Signup</button>
                 </div>
           </form>
-            
-        </div>
-    </div>
-</div>
-        
+      </div>       
+      
+    
    

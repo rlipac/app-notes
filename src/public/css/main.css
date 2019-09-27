@@ -8,5 +8,21 @@ body {
 }
 
 .new-note{
-    background-color: #6DD5FA;
+    background-color: #6DD5FA;  
 }
+
+.card-container{
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+}
+  .card {
+    padding: 6px;
+}
+.card:hover {
+    padding: 0px;
+    -moz-transition: .3s linear;
+    -webkit-transition: .3s ease-out;
+    transition: .3s linear;
+}
+

@@ -1,7 +1,8 @@
 
 
     const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://richard:mariabelen@cluster0-pagkr.mongodb.net/test?retryWrites=true&w=majority', {
+ // mongoose.connect('mongodb+srv://richard:mariabelen@cluster  
+    mongoose.connect('mongodb://localhost/new-voto', {   
     useCreateIndex: true,
     useNewUrlParser: true,
      useUnifiedTopology: true,
@@ -11,12 +12,4 @@ mongoose.connect('mongodb+srv://richard:mariabelen@cluster0-pagkr.mongodb.net/te
     .catch( err => console.error(err));
 
 
-    // const mongoose = require('mongoose');
-    // mongoose.connect('mongodb://localhost/notes-db-app', {
-    //     useCreateIndex: true,
-    //     useNewUrlParser: true,
-    //      useUnifiedTopology: true,
-    //     useFindAndModify: false
-    // })
-    //     .then( db => console.log('DB is Connected...exito!!!'))
-    //     .catch( err => console.error(err));
+  

@@ -11,7 +11,7 @@ const UserSchema =  new Schema({ // crea el modelo  del la tabla User
    
 });
 
-// encruptamos lñas contraseñas // async -> await para que ejecute en forma asincrona
+// encriptamos lñas contraseñas // async -> await para que ejecute en forma asincrona
 UserSchema.methods.encryptPassword = async (password) => {
  const salt= await bcrypt.genSalt(10);
  const hash = bcrypt.hash(password, salt); // le pasamos la contraseña y el sal para obtener el hash

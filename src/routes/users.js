@@ -8,6 +8,7 @@ router.get('/users/signin', (req, res) => {
     res.render('users/signin.hbs')
 });
   
+
 // router.post('/users/signin', passport.authenticate('local',{
 //     successRedirect: '/note',
 //     failureRedirect: '/users/signin',
@@ -15,10 +16,11 @@ router.get('/users/signin', (req, res) => {
 // }));
 
 router.post('/users/signin', passport.authenticate('local',{
-    successRedirect: '/note',
+    successRedirect: '/votaciones',
     failureRedirect: '/users/signin',
     failureFlash: true
 }));
+
 
   //
 
