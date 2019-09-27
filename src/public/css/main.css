@@ -33,7 +33,7 @@ body {
 .new-note{
     background-color: #6DD5FA;  
 }
-@media (max-width: 650px) {
+@media (max-width: 680px) {
     .display-4{
        
         font-size: 32px;
