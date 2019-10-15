@@ -44,7 +44,7 @@ router.post('/users/signup', async  (req, res) => {
     }else{
         const emailUser = await User.findOne({email: email});
         if(emailUser){
-            req.flash('error_msg', 'Este email ya esta en uso');
+            req.flash('error_msg', 'Ud YA REALIZO SU VOTO ');
             res.redirect('/users/signup');
             console.log("entro al if..!!!");
         }else{
