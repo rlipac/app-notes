@@ -36,7 +36,7 @@ router.post('/users/signup', async  (req, res) => {
     if(email.length <= 0 ){
         errors.push({text: 'Coloque su email'});
     }
-    if(  password.length < 8 ){
+    if(  password.length < 6 ){
         errors.push({text: ' la contraseña tiene que ser mayor a 8 caracteres'});
     }
     if( errors.length > 0 ) {
