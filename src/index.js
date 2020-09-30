@@ -25,7 +25,7 @@ app.engine('.hbs', exphbs({
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs'
 }));
-app.set('views engine', '.hbs');
+app.set('views engine', '.hbs', '.ejs');
 
 // Middlewares
 
@@ -56,7 +56,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 app.use(require('./routes/votacion'));
-
+app.use(require('./routes/candidatos'));
 //Static Files
 
 app.use(express.static(path.join(__dirname, 'public')));
