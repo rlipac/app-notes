@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a8dd90d101.js"></script>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/1200/1200785.svg">
+
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title>appVotar</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand" href="/">AppVotar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/candidatos/add">New candidato</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown  mr-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Enlaces
+                    </a>
+                    <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdownMenuLink">
+
+                        <a class="nav-link" href="/votos">Resultados</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/users/signup/:idCandidato" active>Votar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <style>
+        /* .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .card {
+
+            margin: .5em 0;
+        } */
+        .micard{
+            display: block;
+            margin: 1em 0;
+        }
+        .card {
+
+            border: solid red 3px;
+        }
+        .miformulario{
+            display: block;
+            padding: 0 1em;
+            border:solid 3px green;
+        }
+    </style>
+
+    <div class="container ">
+        <div class="col-md-7 mx-auto  p-md-5">
+           <form action="/users/signup/<%= mivoto._id %>" method="POST">
+                 <div class="miformulario">
+                    <div class="card mx-auto micard" style="width: 17rem;">
+                        <img src="<%= mivoto.urlFoto%>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                     <input type="text" class="form-control" name="voto" value="<%= mivoto.name %>" id="" >
+                    <input type="text" class="form-control" name="dni" value="" id="" placeholder="DNI" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="ciudad" value="" id="" placeholder="Tu ciudad" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>

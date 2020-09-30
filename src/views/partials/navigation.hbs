@@ -12,40 +12,32 @@
             <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
             </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/candidatos/add">New candidato</a>
+            </li>
              
-             {{#if user}}
-                <li class="nav-item">
-                    <a class="nav-link ml-5" href="/about">Hola  {{user.email}}</a>
-                     
-                </li>
-             {{else}}
-            {{/if}}
+          
         </ul>
 
         <ul class="navbar-nav ml-auto">
-            {{#if user}}
+           
                 <li class="nav-item dropdown  mr-5">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Notes
+                       Enlaces
                     </a>
                     <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdownMenuLink">
-                       <a class="nav-link " href="/note">Notes</a>
-                        <a class="nav-link " href="/note/add">Add New Nota</a>
-                         <a class="nav-link" href="/votaciones">Votaciones</a>
+                    
+                         <a class="nav-link" href="/votos">Resultados</a>
                         <div class="dropdown-divider"></div>
-                        <a class="nav-link " href="/users/logout">Logout</a>
                     </div>
                 </li>
-            {{else}}
+         
                 <li class="nav-item active">
-                    <a class="nav-link" href="/users/signup" active>Votar</a>
+                    <a class="nav-link" href="/users/signup/:idCandidato" active>Votar</a>
 
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link " href="/users/signin">Signin</a>
-                </li>-->
-            {{/if}}
+          
            
 
         </ul>

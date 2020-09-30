@@ -18,20 +18,39 @@ body {
 
 .mi-foto{
     padding: 4px;
+    border: solid red 3px;
    
     background-color: #fafafa
 }
-.mi-foto:hover{
+/* .mi-foto:hover{
     padding: 8px;
   
     -moz-transition: .3s linear;
     -webkit-transition: .3s ease-out;
     transition: .3s linear;
-}
+} */
 
 
 .new-note{
     background-color: #6DD5FA;  
+}
+
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
+.card{
+ 
+    margin: .5em 0;
+}
+.cadidato-card{
+   
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover; 
 }
 @media (max-width: 680px) {
     .display-4{

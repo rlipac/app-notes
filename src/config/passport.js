@@ -3,34 +3,34 @@ const LocalStrategy = require('passport-local').Strategy;
 
 
 
-const User = require('../models/User');
+const Sufragio = require('../models/Votos');
 
 
 passport.use(new LocalStrategy({
-    usernameField: 'email'
-}, async (email, passport, done) =>{
-    const user = await User.findOne({email: email});
-    if(!user){
-        console.log('correo no existe');
-        return done(null, false, { message: 'Usuario No existe.'});
+    votoField: 'dni'
+}, async (dni, passport, done) =>{
+    const dniVoto = await Sufragio.findOne({dni: dni});
+    if(!dniVoto){
+        console.log('dni de usuario no existe no existe');
+        return done(null, false, { message: 'DNI de Usuario No existe.'});
     } else {
-        const match = await user.matchPassword(passport);
+        const match = await dniVoto.matchPassword(passport);
         if(match){
-            return done(null, user);
+            return done(null, dniVoto);
         } else {
-            console.log('contraseña invalida');
-            return done(null, false, {message: 'Password incorrecto'});
+            console.log('DNI invalido');
+            return done(null, false, {message: 'DNI incorrecto'});
         }
     }
 }
 ));
 
-passport.serializeUser((user, done) => {
-    done(null, user.id);
+passport.serializeUser((dniVoto, done) => {
+    done(null, dniVoto.id);
 });
 
 passport.deserializeUser((id, done) =>{
-    User.findById(id, (err, user)=>{
-        done(err, user);
+    Sufragio.findById(id, (err, dniVoto)=>{
+        done(err, dniVoto);
     });
 });
